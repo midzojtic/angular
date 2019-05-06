@@ -5,11 +5,15 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import {HomeComponent} from "./home/home.component";
 import { InsertComponent } from './insert/insert.component';
+import { LoginComponent } from './login/login.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    InsertComponent
+    InsertComponent,
+    LoginComponent,
+    NavComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +23,8 @@ import { InsertComponent } from './insert/insert.component';
   ],
   exports: [
     HomeComponent,
-    InsertComponent
+    InsertComponent,
+    NavComponent
   ],
   providers: [
 
