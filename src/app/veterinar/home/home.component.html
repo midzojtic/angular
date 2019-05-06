@@ -1,8 +1,12 @@
-<div style="text-align:center">
-<p>
-  home works! it is alive
-</p>
-  <p>
-    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-  </p>
+<div>
+  <button (click)="screen=1.1">Login</button>
+  <button (click)="screen=1.2">Insert</button>
+</div>
+<div [ngSwitch]="screen">
+  <div *ngSwitchCase="1.1">
+    <app-home>Loading...</app-home>
+  </div>
+  <div *ngSwitchCase="1.2">
+    <app-insert>Loading...</app-insert>
+  </div>
 </div>
