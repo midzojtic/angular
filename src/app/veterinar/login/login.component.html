@@ -1,5 +1,14 @@
-<p>
-  login works!
-</p>
-
+<div>
+  <ul>
+    <li>
+      Username
+    </li>
+    <li><input type="text" [ngModel]="model.username"></li>
+    <li>
+      Password
+    </li>
+    <li><input type="text" [ngModel]="model.password"></li>
+  </ul>
+</div>
 <button class="btn btn-primary" (click)="onSubmit()">Login</button>
+
