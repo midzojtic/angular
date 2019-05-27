@@ -4,6 +4,8 @@ import {UserModel} from "../model/user.model";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {RestDto} from "../model/rest-dto.model";
 import {environment} from "../../../environments/environment";
+import {HttpClientService} from "../services/service/http-client.service";
+
 
 @Component({
   selector: 'app-login',
@@ -14,11 +16,11 @@ export class LoginComponent implements OnInit {
 
   model: UserModel;
   private serverUrl: string;
-  private BASE_URL = '/login';
+  private BASE_URL = '/login/';
 
   constructor(private http: HttpClient,
-    private route: ActivatedRoute,
-    private router: Router
+              private route: ActivatedRoute,
+              private router: Router, private httpClientService: HttpClientService
   ) {
 
   }
@@ -32,12 +34,6 @@ export class LoginComponent implements OnInit {
   onSubmit() {
 
     console.log('Accessed onSubmit');
-
-    if (this.model.username == null || this.model.username === '')
-      return false;
-
-    if (this.model.password == null || this.model.password === '')
-      return false;
 
     this.http.post<RestDto<any>>(this.serverUrl, this.model).subscribe(
       (response: RestDto<any>) => {

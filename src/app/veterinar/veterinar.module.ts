@@ -8,25 +8,39 @@ import {InsertComponent} from './insert/insert.component';
 import {LoginComponent} from './login/login.component';
 import {NavComponent} from './nav/nav.component';
 import {FormsModule} from "@angular/forms";
+import {CarListComponent} from './car-list/car-list.component';
+import {MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule} from "@angular/material";
+import {CarEditComponent} from './car-edit/car-edit.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     HomeComponent,
     InsertComponent,
     LoginComponent,
-    NavComponent
+    NavComponent,
+    CarListComponent,
+    CarEditComponent
   ],
   imports: [
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatListModule,
+    MatToolbarModule,
+    RouterModule
+
   ],
   exports: [
     HomeComponent,
     InsertComponent,
-    NavComponent
+    NavComponent,
+    CarListComponent
   ],
   providers: [
 
