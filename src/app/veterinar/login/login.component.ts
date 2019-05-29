@@ -4,8 +4,6 @@ import {UserModel} from "../model/user.model";
 import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {RestDto} from "../model/rest-dto.model";
 import {environment} from "../../../environments/environment";
-import {HttpClientService} from "../services/service/http-client.service";
-
 
 @Component({
   selector: 'app-login',
@@ -16,11 +14,11 @@ export class LoginComponent implements OnInit {
 
   model: UserModel;
   private serverUrl: string;
-  private BASE_URL = '/login/';
+  private BASE_URL = '/login';
 
   constructor(private http: HttpClient,
               private route: ActivatedRoute,
-              private router: Router, private httpClientService: HttpClientService
+              private router: Router
   ) {
 
   }
@@ -35,8 +33,11 @@ export class LoginComponent implements OnInit {
 
     console.log('Accessed onSubmit');
 
-    this.http.post<RestDto<any>>(this.serverUrl, this.model).subscribe(
-      (response: RestDto<any>) => {
+    console.log('Username: ' + this.model.username);
+    console.log('Password: ' + this.model.password);
+
+    this.http.post<RestDto<UserModel>>(this.serverUrl, this.model).subscribe(
+      (response: RestDto<UserModel>) => {
         if (response.success) {
           this.router.navigate(['home']);
         } else {

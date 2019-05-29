@@ -1,8 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import 'app/veterinar/assessts/bootstrap/bootstrap.min.css';
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
+}
+
+.center-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh
+}
+
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+}
+
+.mg-top-5 {
+  margin-top: 5px;
 }

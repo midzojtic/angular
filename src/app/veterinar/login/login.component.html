@@ -1,14 +1,27 @@
-<div>
-  <ul>
-    <li>
-      Username
-    </li>
-    <li><input type="text" [ngModel]="model.username"></li>
-    <li>
-      Password
-    </li>
-    <li><input type="text" [ngModel]="model.password"></li>
-  </ul>
+<link href="veterinar/assessts/bootstrap/bootstrap.min.css">
+<link href="veterinar/assessts/bootstrap/bootstrap.min.js">
+<div class="container-fluid">
+
+  <div class="row center-login">
+    <div class="col-sm-1 col-md-2 col-lg-3"></div>
+    <div class="col-sm-10 col-md-8 col-lg-6">
+
+      <div class="center-div">
+        <mat-label>Username</mat-label>
+      </div>
+      <div class="center-div"><input type="text" [(ngModel)]="model.username"></div>
+      <div class="center-div">
+        <mat-label>Password</mat-label>
+      </div>
+      <div class="center-div"><input type="text" [(ngModel)]="model.password"></div>
+      <div class="center-div mg-top-5">
+        <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+      </div>
+
+    </div>
+    <div class="col-sm-1 col-md-2 col-lg-3"></div>
+  </div>
+
 </div>
-<button class="btn btn-primary" (click)="onSubmit()">Login</button>
+
 
