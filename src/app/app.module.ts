@@ -5,9 +5,9 @@ import {VeterinarModule} from "./veterinar/veterinar.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from './veterinar/app-routing.module';
-import {MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule} from "@angular/material";
+import {MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule, MatTableModule} from "@angular/material";
 import {RouterModule} from "@angular/router";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -28,9 +28,9 @@ import {FormsModule} from "@angular/forms";
     MatListModule,
     MatToolbarModule,
     RouterModule,
-    FormsModule
-
-
+    FormsModule,
+    ReactiveFormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
