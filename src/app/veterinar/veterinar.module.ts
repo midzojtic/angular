@@ -9,9 +9,17 @@ import {LoginComponent} from './login/login.component';
 import {NavComponent} from './nav/nav.component';
 import {FormsModule} from "@angular/forms";
 import {CarListComponent} from './car-list/car-list.component';
-import {MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule} from "@angular/material";
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatInputModule,
+  MatListModule,
+  MatTableModule,
+  MatToolbarModule
+} from "@angular/material";
 import {CarEditComponent} from './car-edit/car-edit.component';
 import {RouterModule} from "@angular/router";
+import {TableComponent} from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +28,8 @@ import {RouterModule} from "@angular/router";
     LoginComponent,
     NavComponent,
     CarListComponent,
-    CarEditComponent
+    CarEditComponent,
+    TableComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +42,8 @@ import {RouterModule} from "@angular/router";
     MatInputModule,
     MatListModule,
     MatToolbarModule,
-    RouterModule
+    RouterModule,
+    MatTableModule
 
   ],
   exports: [
