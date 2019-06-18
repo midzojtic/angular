@@ -15,6 +15,7 @@ import {
 } from "@angular/material";
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NgFlashMessagesModule} from "ng-flash-messages";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTableModule
+    MatTableModule,
+    NgFlashMessagesModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
