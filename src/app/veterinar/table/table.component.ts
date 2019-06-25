@@ -5,12 +5,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {environment} from "../../../environments/environment";
 import {ClientModel} from "../model/client.model";
 
-export interface Food {
-  calories: number;
-  carbs: number;
-  fat: number;
-  name: string;
-  protein: number;
+export interface ClientModel {
+  clientModel: object;
 }
 
 @Component({
@@ -50,6 +46,7 @@ export class TableComponent implements OnInit {
       (response: RestDto<Array<ClientModel>>) => {
         if (response.success) {
           var clients: ClientModel[] = response.data;
+          console.log('SUCCESS' + clients);
           this.mapTable(clients);
         } else {
           console.log('No client data')
@@ -81,7 +78,7 @@ export class TableComponent implements OnInit {
       c.clientSurname = clients[num].clientSurname;
       c.clientEmail = clients[num].clientEmail;
       c.clientCell = clients[num].clientCell;
-
+      this.dataSource.fill(c);
     }
   }
 
